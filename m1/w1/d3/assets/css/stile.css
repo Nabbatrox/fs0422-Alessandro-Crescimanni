@@ -1,0 +1,98 @@
+/* IMPOSTAZIONI GENERALI */
+html {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #00a0c6;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    
+
+}
+
+
+span {
+    color: #00a0c6;
+    background-color: white;
+    text-align: center;
+    margin: 25px;
+}
+
+h2 {
+    color: black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#hrhead {
+    border-color: blue;
+    border-width: 5px;
+    margin: 0px;
+}
+
+/* MAIN */
+
+
+#infop {
+    color: #00a0c6;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 30px;
+}
+
+figure {
+    text-align: center
+}
+
+figure img {
+    
+    border: 1px solid black;
+    padding: 5px;
+}
+
+figcaption {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/* ELEMENTI NEL MAIN */
+
+main {
+    margin: 15px;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+main p {
+    text-align: left;
+
+}
+
+b {
+    font-weight: bold;
+}
+
+
+
+/* hr style dotted per linea tratteggiata*/
+
+/* FOOTER */
