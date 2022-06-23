@@ -12,7 +12,7 @@ header {
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
-    
+
 }
 
 
@@ -20,7 +20,7 @@ h1 {
     color: white;
     text-align: center;
     line-height: 25px;
-    
+
 
 }
 
@@ -39,9 +39,10 @@ h2 {
 }
 
 #hrhead {
-    border-color: blue;
+    border-color: rgb(64, 147, 168);
     border-width: 5px;
     margin: 0px;
+    margin-bottom: -10px;
 }
 
 /* MAIN */
@@ -60,8 +61,8 @@ figure {
 }
 
 figure img {
-    
-    border: 1px solid black;
+
+    border: 1px solid lightgray;
     padding: 5px;
 }
 
@@ -88,11 +89,111 @@ main p {
 }
 
 b {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
+blockquote {
+    margin: 15px;
+    background-color: lightgray;
+    padding: 30px;
+    border-radius: 10px;
+    font-style: oblique;
+    font-weight: 700;
 
+}
 
-/* hr style dotted per linea tratteggiata*/
+cite {
+
+    font-weight: bolder;
+
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+strong {
+    color: #00a0c6;
+}
+
+#hrstyled {
+    margin: 3px;
+    style: dashed
+}
+
+h3 {
+
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+mark {
+    background-color: #00a0c6;
+    color: aliceblue;
+
+}
+
+#link {
+    color: red;
+}
+
+#banana {
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+ul {
+
+    margin-bottom: 40px;
+}
+
+li {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+dt {
+
+    line-height: 50px;
+}
+
+dd {
+
+    margin-left: 50px;
+}
+
+dl {
+
+    margin-bottom: 50px;
+}
 
 /* FOOTER */
+
+
+footer {
+    background-color: rgb(54, 53, 53);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+
+kbd {
+    font-weight: bold;
+    font-style: oblique;
+    color: yellow;
+}
+
+#link1 {
+    color: red;
+    font-weight: lighter;
+}
+
+hr {
+    margin: 3px;
+    margin-bottom: 50px;
+
+}
