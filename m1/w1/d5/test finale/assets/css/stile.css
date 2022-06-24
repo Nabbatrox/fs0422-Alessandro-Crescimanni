@@ -1,0 +1,188 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+
+
+}
+
+
+body {
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65rem;
+
+
+
+
+}
+
+
+
+figure {}
+
+header {
+
+    background-color: black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+
+#uheader div h1 {
+    color: #25a2c3;
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 36px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+
+#uheader div p {
+    word-spacing: 0.2rem;
+
+    line-height: 2rem;
+    padding: 10px;
+    margin-bottom: 40px;
+    /* Curioso di sapere se il comando Width sia piu appropriato rispetto a Margin per stringere il testo.*/
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+#uheader {
+    background-image: url(../images/banner.jpg);
+    background-size: 550px;
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+    background-repeat: no-repeat;
+    margin-bottom: 4rem;
+}
+
+#uheader div a {
+    background-color: #f04c2f;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem 2rem 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Monsterrat', sans-serif;
+}
+
+#aboutyou {
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#aboutyou h3 {
+
+    color: #25a2c3;
+    margin-bottom: 1rem;
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    font-size: 1.7rem;
+}
+
+
+#aboutyou p {
+
+    margin-bottom: 3rem;
+    line-height: 2rem;
+
+}
+
+#aboutyou img {
+
+    border-radius: 70%;
+    margin-bottom: 2rem;
+
+}
+
+#citediv {
+    background-color: #f04c2f;
+    padding: 4rem;
+    color: white;
+    margin-bottom: 2rem
+}
+
+#citediv h3 {
+    font-weight: bolder;
+    font-size: 32px;
+    margin-bottom: 3rem;
+}
+
+blockquote #citazione {
+
+    margin-bottom: 3rem;
+}
+
+#citazione {
+
+    font-style: italic;
+}
+
+#citediv :nth-child(2) {
+
+    margin-bottom: 1rem;
+}
+
+#citediv :nth-child(3) {
+
+    margin-bottom: 0.2rem;
+}
+
+#citediv :nth-child(4) {
+
+    font-size: x-small;
+}
+
+
+#articles {
+
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+
+}
+
+#articles h3 {
+
+    color: #25a2c3;
+    margin-bottom: 1rem;
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+
+
+}
+#articles article  {
+
+    border: 1px solid  #dee1e3;
+    border-radius: 0.2rem ;
+    margin-bottom: 2rem;
+ 
+}
+
+footer {
+    background-color: #25a2c3;
+    color: #dee1e3;
+
+}
+
+footer h3 {
+
+
+}
+
+footer address {
+
+    text-decoration: none;
+}
