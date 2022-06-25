@@ -11,15 +11,14 @@ body {
     color: #393d41;
     font-size: 1.2rem;
     line-height: 1.65rem;
+    
+}
 
-
-
+body p {
+    font-weight: 400;
 
 }
 
-
-
-figure {}
 
 header {
 
@@ -56,7 +55,7 @@ header {
 
 #uheader {
     background-image: url(../images/banner.jpg);
-    background-size: 550px;
+    background-size: cover;
     padding-bottom: 6rem;
     padding-top: 3rem;
     background-repeat: no-repeat;
@@ -107,14 +106,18 @@ header {
 
 #citediv {
     background-color: #f04c2f;
-    padding: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
     color: white;
     margin-bottom: 2rem
 }
 
-#citediv h3 {
+
+#citediv h2 {
     font-weight: bolder;
-    font-size: 32px;
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.5rem;
     margin-bottom: 3rem;
 }
 
@@ -126,28 +129,32 @@ blockquote #citazione {
 #citazione {
 
     font-style: italic;
+    font-weight: 300;
 }
 
 #citediv :nth-child(2) {
 
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 #citediv :nth-child(3) {
+    font-size: 24px;
 
     margin-bottom: 0.2rem;
 }
 
 #citediv :nth-child(4) {
 
-    font-size: x-small;
+    font-size: 14px;
 }
 
 
 #articles {
-
-    margin-left: 4rem;
-    margin-right: 4rem;
+    /* margin-top: 2rem; */
+    /* margin-left: 2rem; */
+    /* margin-right: 2rem; */
+    /* margin-bottom: 5rem; */
+    margin: 4rem 2rem 5rem 2rem;
 
 
 }
@@ -155,6 +162,7 @@ blockquote #citazione {
 #articles h3 {
 
     color: #25a2c3;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     font-family: 'Monsterrat', sans-serif;
     font-weight: bolder;
@@ -163,26 +171,51 @@ blockquote #citazione {
 
 
 }
-#articles article  {
 
-    border: 1px solid  #dee1e3;
-    border-radius: 0.2rem ;
+#articles p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+#articles article {
+
+    border: 1px solid #dee1e3;
+    border-radius: 0.2rem;
     margin-bottom: 2rem;
- 
+
 }
 
 footer {
     background-color: #25a2c3;
     color: #dee1e3;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
 
 }
 
 footer h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Monsterrat', sans-serif;
+    margin-bottom: 2rem;
 
 
 }
 
-footer address {
+footer address a {
 
-    text-decoration: none;
+    color: #dee1e3;
+
+}
+
+footer p a {
+
+    color: #dee1e3;
+}
+
+footer hr {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 50%;
 }
