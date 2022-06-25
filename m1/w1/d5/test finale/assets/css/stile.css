@@ -11,7 +11,7 @@ body {
     color: #393d41;
     font-size: 1.2rem;
     line-height: 1.65rem;
-    
+
 }
 
 body p {
@@ -34,10 +34,11 @@ header {
     font-family: 'Monsterrat', sans-serif;
     font-weight: bold;
     line-height: 1.5rem;
-    padding-bottom: 1rem;
     font-size: 36px;
+    padding-bottom: 1rem;
     padding-right: 2rem;
     padding-left: 2rem;
+
 }
 
 
