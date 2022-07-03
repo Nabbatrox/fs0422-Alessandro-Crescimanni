@@ -2,22 +2,385 @@
 
 html {
 
+    font-size: 67.5%;
+    margin: 0 auto;
     font-family: 'Fira Sans', sans-serif;
+
+}
+
+body {
+
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+
+}
+
+* {
+
+    box-sizing: border-box;
+
 }
 
 h1 {
 
     font-size: 4rem;
+
 }
 
 h2 {
+
     font-size: 3.5rem;
+}
+
+i {
+
+    font-size: 30px;
+    color: red;
+
 }
 
 /* HEADER */
 
-/* @media screen and (min-width: 1024px) {
+
+@media screen and (min-width:320px) and (max-width:767px){
+
     .header-navbar {
+        background-color: white;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: space-evenly;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        box-shadow: 0 2px 15px #d3d3d3;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+
+    }
+
+    .headings {
+
+        line-height: 1.2rem
+
+    }
+
+
+    .tendina {
+
+        display: none;
+
+    }
+
+    .tendina:checked~.kebabmenu {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+
+
+    }
+
+    .menu {
+
+        padding-left: 2rem;
+        border: none;
+
+    }
+
+
+    .kebabmenu {
+
+        list-style-type: none;
+        display: none;
+
+    }
+
+    .kebabmenu a {
+
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+
+    }
+
+    .header-navbar nav {
+
+        display: none;
+
+    }
+
+}
+
+
+
+
+/* MAIN */
+
+
+
+main {
+
+    text-align: center;
+
+}
+
+
+
+.uheader {
+
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem;
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 0px 2px 5px black;
+
+}
+
+.uheader p {
+
+    margin-top: 2rem;
+    font-size: 1.2rem;
+
+}
+
+.uheader p a {
+
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 2rem;
+    cursor: pointer;
+
+}
+
+#maintitle {
+
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    line-height: 3rem;
+
+}
+
+#secondtitle {
+
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+
+}
+
+#titles {
+
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+
+}
+
+
+.aboutyou {
+
+    background-color: white;
+    margin: 0 2rem 0 2rem;
+    font-size: 1.2rem;
+    padding: 2rem 0 2rem 0;
+
+}
+
+#main_p {
+
+    margin-bottom: 2rem;
+
+}
+
+#secondary_p {
+
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#secondary_p h3 {
+
+    font-size: 2.2rem;
+
+}
+
+#secondary_p p {
+
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+
+}
+
+#secondary_p_blue {
+
+    color: white;
+    background-color: #0c0633;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+
+}
+
+#secondary_p_blue p {
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+
+}
+
+#secondary_p_blue a {
+
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer
+
+}
+
+
+#notebookimg {
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+#yourfuture {
+
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+#yourfuture h3 {
+
+    margin-bottom: 1.5rem;
+
+}
+
+#yourfuture p {
+
+    margin-bottom: 2rem;
+
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+
+    background-color: #d3d3d3;
+
+}
+
+#footer {
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+
+}
+
+#footertitles {
+
+    margin-bottom: 3rem
+
+}
+
+#footer p {
+
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+
+}
+
+#footer h2 {
+
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+
+}
+
+
+#footer ul {
+
+    list-style-type: none;
+
+}
+
+#footer ul li {
+
+    display: inline-block;
+    margin-bottom: 2rem;
+
+}
+
+
+#footer fieldset button {
+
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%
+
+}
+
+#footer fieldset input {
+
+    padding-top: 15px;
+    width: 100%;
+
+}
+
+#footer address {
+
+    font-size: 1rem;
+
+}
+
+#footer address a {
+
+    text-decoration: none;
+    color: #000;
+    
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+
+    html {
+
+        font-size: 85%;
+
+    }
+
+    .header-navbar {
+
         background-color: white;
         width: 100%;
         height: 90px;
@@ -29,46 +392,97 @@ h2 {
         top: 0;
         box-shadow: 0 2px 15px 0 #d3d3d3;
 
-
-
     }
 
-    nav a {
+    #navtablet a {
 
         text-decoration: none;
         color: #000;
         padding: 25px;
 
-
     }
 
-    nav a:nth-child(4) {
+    #navtablet a:nth-child(4) {
 
         padding: 15px;
         padding-left: 20px;
         padding-right: 20px;
         color: white;
         background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+
     }
 
+    input, label, ul {
 
-} */
+        display: none;
 
-/* cover position center 
-background repeat no repeat */
+    }
 
+    .uheader {
 
+        background-image: url(../images/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        color: white;
+        text-shadow: 0px 2px 5px black;
+    
+    }
+    
+    .uheader p {
 
+        margin-top: 2rem; 
+        font-size: 1.2rem;
+    
+    }
+    
+    .uheader p a {
+    
+        background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+        text-decoration: none;
+        color: white;
+        padding: 10px 15px;
+        margin-top: 2rem;
+        cursor: pointer;
 
-body {
-    color: #000;
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    padding-top: 10rem;
+    }
+
+    #secondary_p {
+
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 6rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+    }
+    
+
+    .aboutjob {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+    .aboutjob i, h3 {
+
+        margin-top: 0.5rem;
+
+    }
+
+    #yourfuture {
+
+        height: 2rem;
+        
+    }
+
 }
-
-/* MAIN */
-
-/* FOOTER */
-
-/* RESPONSIVE */
