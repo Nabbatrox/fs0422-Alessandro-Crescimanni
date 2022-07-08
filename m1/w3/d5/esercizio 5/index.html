@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creazione di una calcolatrice in JavaScript.">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Calcolatrice Epicode in JavaScript</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> EpiCalc </h1>
+
+
+    </header>
+
+    <main>
+
+        <div id="calcolatrice">
+
+            <div class="display">
+
+                <input id="display" placeholder="0" type="text">
+
+             </div>
+
+             <div class="bottoni">
+
+                <button onclick="clear1(this)">Clear</button>
+                <button onclick="back(this)">Back</button>
+                <button data-symbol="%" onclick="addSymbol(this)">%</button>
+                <button data-symbol="/" onclick="addSymbol(this)">/</button>
+                <button data-symbol="7" onclick="addSymbol(this)">7</button>
+                <button data-symbol="8" onclick="addSymbol(this)">8</button>
+                <button data-symbol="9" onclick="addSymbol(this)">9</button>
+                <button data-symbol="X" onclick="addSymbol(this)">X</button>
+                <button data-symbol="4" onclick="addSymbol(this)">4</button>
+                <button data-symbol="5" onclick="addSymbol(this)">5</button>
+                <button data-symbol="6" onclick="addSymbol(this)">6</button>
+                <button data-symbol="-" onclick="addSymbol(this)">-</button>
+                <button data-symbol="1" onclick="addSymbol(this)">1</button>
+                <button data-symbol="2" onclick="addSymbol(this)">2</button>
+                <button data-symbol="3" onclick="addSymbol(this)">3</button>
+                <button data-symbol="+" onclick="addSymbol(this)">+</button>
+                <button data-symbol="0" onclick="addSymbol(this)">0</button>
+                <button data-symbol="." onclick="addSymbol(this)">.</button>
+
+
+                <button onclick="calc()">Enter</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
