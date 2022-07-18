@@ -14,7 +14,7 @@ dataAttuale.innerHTML = data
 
 
 let dataAttuale2 = document.getElementById('data-attuale2')
-dataAttuale2.innerHTML = data.toLocaleDateString()
+dataAttuale2.innerHTML = data;
 
 
 
