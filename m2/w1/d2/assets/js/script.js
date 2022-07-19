@@ -2,7 +2,7 @@
 let budget = 3000;
 let i = 0;
 
-while (budget >= 0) {
+while (i < 3) {
 
     let spesa = Math.random() * 200;
 
@@ -32,9 +32,19 @@ while (budget >= 0) {
 
     }
 
-    if (spesa > budget) {
 
-        break
+
+    if (spesa > budget && i == 2) {
+
+        let messaggio3 = document.createElement("div");
+
+        messaggio3.innerHTML = 'Niente liquidità';
+
+        document.body.append(messaggio3);
+
+        i+= 1;
+
+        
 
     }
 
