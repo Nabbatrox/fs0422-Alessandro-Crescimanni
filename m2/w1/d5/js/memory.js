@@ -112,6 +112,8 @@ function displayIcon() {
         if (victory == 11) {
             console.log("victory");
             let timer = document.getElementById("tempoTrascorso");
+            timer.style.fontWeight = "bold";
+            timer.style.color = "blue";
             timer.innerHTML = tempoAttuale.innerHTML;
             gameCompleted.style.display = 'visible';
             gameCompleted.classList.add('active');
