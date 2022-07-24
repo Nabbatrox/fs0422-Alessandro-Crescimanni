@@ -123,7 +123,7 @@ function displayIcon() {
 
 // mio commento: ho riorganizzato il timeout per fixare l'animazione della seconda icona cliccata dandogli un delay di 800ms, compattando il codice in poche righe.
 // la stessa cosa avviene per le consegne sotto. Il codice e' stato scritto per come ci ragionavo, ammetto di non essere stato in grado di
-// integrare il codice della consegna: l'ho trovato complicato per come lo stavo ragionando io e non riuscivo a comprenderlo in relazione a come lo stavo impostando sulla funzione playGame.
+// integrare il codice della consegna: l'ho trovato complicato per come lo stavo ragionando io e non riuscivo a comprenderlo in relazione a come lo stavo impostando sulla funzione playGame e displayIcon.
 
 
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
