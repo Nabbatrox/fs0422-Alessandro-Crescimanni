@@ -1,0 +1,30 @@
+
+@import 'variables';
+@import 'navbar';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+
+
+body {
+	background: linear-gradient(-45deg, #ee52b7, #b93ce7, #4323d4, #7b5fcd);
+	background-size: 400% 400%;
+    background-position: cover;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    font-family: 'Tinos', serif;
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

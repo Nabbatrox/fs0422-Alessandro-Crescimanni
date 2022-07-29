@@ -1,0 +1,19 @@
+.navbar  {
+ 
+    background-color: $secondary;
+    height: 8rem;
+    font-weight: bold;
+   
+}
+
+#navbarNavDropdown ul a {
+    @include Font;
+}
+
+.navbar-nav li a {
+
+    @include Font;
+}
+
+
+

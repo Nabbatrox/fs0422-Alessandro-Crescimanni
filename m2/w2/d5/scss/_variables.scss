@@ -1,0 +1,22 @@
+// Variabili globali
+
+//colore tema;
+$mySecondary: #f4f4f4;
+
+$secondary: $mySecondary;
+
+//font
+
+$font-size-base : 1.25rem;
+
+
+
+$font-color : #4323d4;
+
+@mixin Font {
+    color: $font-color;
+    opacity: 1;
+}
+
+
+
