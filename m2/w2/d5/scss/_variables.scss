@@ -1,22 +1,44 @@
 // Variabili globali
 
 //colore tema;
-$mySecondary: #f4f4f4;
+
+$mySecondary: #f4f4f460;
 
 $secondary: $mySecondary;
+
+$myPrimary:  #002089;
+$primary: $myPrimary;
 
 //font
 
 $font-size-base : 1.25rem;
 
+// Il titolo h3 diventa bianco se $myBackground e' nero, dimostrando che la funzione fa quel che deve. Sono le 6. Fatto da zero oggi speedrun 24h.
+
+$myBackground: white !default; 
+
+$font-color1 : black;
+
+$font-color2 : white;
 
 
-$font-color : #4323d4;
+@mixin font {
+    color: $font-color1;
+    font-family: 'Teko', sans-serif;
+    text-shadow: 1px 1px #ffffff;
+    letter-spacing: 0.25rem;
+    font-size: 1.6rem;
 
-@mixin Font {
-    color: $font-color;
-    opacity: 1;
+}
+@mixin fontmain {
+    color: $font-color2;
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.25rem;
+
 }
 
+@mixin function {
 
-
+    color: ilMale($myBackground)
+    
+}

@@ -1,18 +1,31 @@
 .navbar  {
  
     background-color: $secondary;
-    height: 8rem;
     font-weight: bold;
+    border-bottom: 1px solid rgb(0, 0, 0);
    
 }
 
-#navbarNavDropdown ul a {
-    @include Font;
+.navbar-toggler {
+
+   color: black;
+
 }
+
+.navbar .navbar-brand {
+    @include fontmain;
+}
+
+
+#navbarNavDropdown ul a {
+    @include font;
+    
+}
+
 
 .navbar-nav li a {
 
-    @include Font;
+    @include font;
 }
 
 

@@ -2,104 +2,323 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-5-strong">
-        <div class="container-fluid ">
-            <a class="navbar-brand justify-content-start ms-3 ms-lg-5" href="#">Navbar</a>
-            <button class="navbar-toggler justify-content-end me-3" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end me-lg-5" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown link
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <video autoplay muted loop id="myVideo">
 
-    <div class="row text-center">
-        <div class="col-lg-6 offset-lg-3">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./imgs/msg982423177-10814.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./imgs/msg982423177-10814.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./imgs/msg982423177-10814.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
+    <source src="./imgs/videoplayback (1).mp4" type="video/mp4">
+    
+  </video>
+
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand justify-content-start ms-2 ms-lg-5" href="#">Alessandro <br> Crescimanni</a>
+      <button class="navbar-toggler justify-content-end me-3" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end me-lg-5 " id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item text-end">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item text-end">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item text-end">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown text-end">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Follow US
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg> Facebook</a></li>
+              <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg> Instagram</a></li>
+              <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg> Twitter</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="background">
+    <div class="container">
+      <div class="row justify-content-evenly my-5">
+
+        <div class="col-lg-4 my-2 p-0 border border-light border-4 rounded-2 text-center">
+
+          <div class="h1 my-3">
+
+            Pro-Audio!
+          
+          </div>
+
+          <img src="./imgs/clement-felix.jpg" class="img-fluid" alt="mixing session">
+
+          <hr class="border border-white border-3">
+
+          <p class="header-p text-start p-3">
+            
+            Our goal is to serve you the best products in the market, making <strong>audio mixing &
+              mastering</strong> a problem of the past! Tell us what's your main objective: focus on your art, we'll
+            think about the rest. Your mix will be unique.
+
+          </p>
+
+          <button type="button" class="btn btn-outline-light my-3">
+            
+            Our Services
+          
+          </button>
+
         </div>
+
+        <div class="col-lg-4 my-2 p-0 border border-light border-4 rounded-2 text-center">
+
+          <div class="h1 my-3">
+            
+            Too Good!
+          
+          </div>
+
+          <img src="./imgs/james-kovin-F2h_WbKnX4o-unsplash.jpg" class="img-fluid" alt="mixing session">
+
+          <hr class="border border-white border-3">
+
+          <p class="header-p text-start p-3">
+            
+            99% of the time, your music is just good! To compete on the market tho, it has to meet
+            some requirements: loudness, clarity, versatility and so on. You can achieve that: send us your demo now!
+            You'll not regret it.
+
+          </p>
+
+          <button type="submit" class="btn btn-outline-light my-3">
+            
+            Send Demo
+          
+          </button>  
+
+        </div>
+      </div>
     </div>
 
+  </section>
+
+  <section id="background1">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col py-5">
+
+          <div class="h3 display-4">
+
+           Always. Feel. Music.
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="audioplayer">
+    <div class="container">
+      <div class="row justify-content-evenly align-items-start">
+        <div class=" col-lg-4  py-5 ">
+
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1476666955&color=%232b38ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/alez_1994" title="Nabbatrox" target="_blank" style="color: #2200fc; text-decoration: none;">Nabbatrox</a> · <a href="https://soundcloud.com/alez_1994/sets/demo-for-work" title="Demo for work" target="_blank" style="color: #cccccc; text-decoration: none;">Demo for work</a></div>
+
+        </div>
+
+        <div class="col-lg-4  py-5 text-center">
+
+          <div>
+
+            <div class="h2 display-4">
+
+              Some Demos
+
+            </div>
+
+            <hr class="border border-white border-3">
+
+            <p>
+
+             Interact with the playlist, hear to some of our work!
+            
+            </p>
+
+          </div>
+
+        </div>       
+      </div>
+    </div>
+  </section>
+
+  <section id="background2" id="testimonial">
+    <div class="cointainer">
+      <div class="row m-0 align-items-center justify-content-evenly text-center">
+        <div class="col-lg-5 col-md-5 offset-md-1 p-3 m-0">
+
+          <img src="./imgs/FoolArcana-9.jpg" class="img-fluid w-75 border border-2 border-dark rounded-circle"
+            id="citriccardo" alt="Riccardo Oliva">
+
+        </div>
+
+        <div class="col-lg-5 col-md-5 offset-md-1 p-3 m-0">
+
+          <div class="h3 display-6">
+            
+            Just what I needed.
+          
+          </div>
+
+          <blockquote>
+
+            <q><em id="citazione">
+
+              Working with Alessandro is truly awesome. His musical knowledge and the choices he
+              makes, add something really unique to my music that I'm very grateful to have.<br></em></q>
+
+          </blockquote>
+
+          <cite>Riccardo Oliva</cite><br>
+          <p><abbr>Prod.</abbr>, Fool Arcana</p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+  <section>
+    <div class="container">
+      <div class="row text-center my-5">
+        <div class="col-lg-6 offset-lg-3 px-0 ">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./imgs/WhatsApp_Image_2022-06-13_at_10.53.12.jpeg" class="d-inline img-fluid" alt="...">
+                <div class="carousel-caption d-md-block">
+                  <h5>Riccardo on stage</h5>
+                  <p>Our MVP on stage.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./imgs/rick.jpg" class="d-inline img-fluid" alt="...">
+                <div class="carousel-caption d-md-block">
+                  <h5>Riccardo flexing</h5>
+                  <p>Bass-player on duty.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./imgs/FL-Studio.png" class="d-inline img-fluid" alt="...">
+                <div class="carousel-caption d-md-block">
+                  <h5>Mixing on a Demo</h5>
+                  <p>Working on arrangement.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="background3">
+    <div class="container text-center">
+      <div class="row align-items-center mx-3">
+        <div class="h2 display-4"> We Use Top-notch Softwares.</div>
+
+        <div class="col-3 py-3">
+
+          <img class="filter-white img-fluid w-auto sponsor" src="./imgs/izotope-vector-logo.svg"  />
+
+        </div>
+
+        <div class="col-3 py-3">
+
+          <img class="img-fluid sponsor w-75" src="./imgs/logo-fabfilter.svg"  />
+
+        </div>
+
+        <div class="col-3 py-3">
+
+          <img class="filter-white img-fluid sponsor w-auto" src="./imgs/Solid_State_Logic_logo.svg"  />
+
+        </div>
+
+        <div class="col-3 py-3">
+
+          <img class="img-fluid sponsor w-75" src="./imgs/universal-audio-vector-logo.svg"  />
+
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
+  <section id="footer">
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Alessandro Crescimanni, Inc</p>
+      </footer>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

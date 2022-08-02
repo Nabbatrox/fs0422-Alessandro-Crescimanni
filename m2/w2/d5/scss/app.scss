@@ -1,30 +1,119 @@
 
 @import 'variables';
 @import 'navbar';
+@import 'header';
+@import 'functions';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+.h2 {
+	
+	text-shadow: 3px 3px #000000;
+    letter-spacing: 0.25rem;
+	color: white;
+	
+}
 
+//Backgrounds
 
+#myVideo {
+	
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+	
+}
 
-body {
-	background: linear-gradient(-45deg, #ee52b7, #b93ce7, #4323d4, #7b5fcd);
-	background-size: 400% 400%;
-    background-position: cover;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-    font-family: 'Tinos', serif;
+#background1 {
+	
+	background-color: white;
+	border-top: 3px solid #000000;
+	margin: 3rem 0;
+	padding: 3rem 0;
+	
+}
+
+#background1 .h3 {
+	
+	text-shadow: 2px 2px rgba(164, 163, 163, 0.886);
+	
+}
+
+#background2 {
+	
+	background-color: white;
+	border-top: 3px solid #000000;	
+	margin: 6rem 0;
+	padding: 6rem 0
+	
+}
+
+#background2 .h3 {
+	
+	@include function;
+	font-weight: 400;
+	
+}
+
+#background3 {
+	
+	background-image: url(../imgs/sam-van-bussel-MrE4n1hzvLg-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 3rem 0;
+	margin-top: 6rem 0;
+	
+}
+
+// SVG workaround
+
+.filter-white {
+	
+	
+	filter: invert(100%) sepia(5%) saturate(229%) hue-rotate(303deg) brightness(113%) contrast(100%);
+	
 }
 
 
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+
+// Demo section
+
+#audioplayer {
+	
+	margin-top: 6rem;
+	
+}
+
+#audioplayer p {
+	
+	@include fontmain;
+	font-size: 1.6rem;
+	
+}
+
+// Carousel 
+
+.carousel-item img {
+	
+	max-width: 100%;
+	height: 350px;
+	
+}
+
+.carousel-caption h5, p {
+
+	font-size: 0.8rem;
+
+}
+
+// Footer
+
+#footer {
+	
+	border-top: 1px solid white;
+	
 }
