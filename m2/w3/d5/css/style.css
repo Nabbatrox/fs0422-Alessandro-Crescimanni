@@ -10680,3 +10680,8 @@ textarea.form-control-lg {
 /* line 4, scss/style.scss */
 .table {
   font-size: 1.6rem; }
+
+/* line 10, scss/style.scss */
+img {
+  height: 50px;
+  width: 50px; }

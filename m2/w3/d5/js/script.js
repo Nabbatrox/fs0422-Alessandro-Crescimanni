@@ -40,9 +40,16 @@ fetch(jsonDir)
                 td.innerHTML = user[prop];
                 trbody.append(td);
                 console.log(prop);
+
+                if (prop == 'profileURL') {
+
+                    let img = document.createElement('img');
+                    td.innerHTML = '';
+                    img.src = user[prop];
+                    td.append(img);
+
+                }
             }
         }
-
     }
-
 })
