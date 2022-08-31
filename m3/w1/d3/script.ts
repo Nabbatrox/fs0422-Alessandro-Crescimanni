@@ -2,13 +2,10 @@
 abstract class Tasse{
     codredd:number;
     redditoAnnuoLordo:number;
-    tasseInps:number;
-    tasseIrpef:number;
-    constructor(codredd:number,redditoAnnuoLordo:number,tasseInps:number,tasseIrpef:number){
+    constructor(codredd:number,redditoAnnuoLordo:number){
         this.codredd = codredd;
         this.redditoAnnuoLordo =redditoAnnuoLordo;
-        this.tasseInps = tasseInps;
-        this.tasseIrpef = tasseIrpef;
+
     }
 
     getTasseInps():number{
@@ -20,36 +17,26 @@ abstract class Tasse{
     }
 
     getTasseIrpef():number|undefined{
+        let IrpefPagata1 = this.redditoAnnuoLordo/100*23;
+        let IrpefPagata2 = IrpefPagata1 + ((this.redditoAnnuoLordo - 15000)/100*25);
+        let IrpefPagata3 = IrpefPagata2 + ((this.redditoAnnuoLordo - 28000)/100*35); 
+        let IrpefPagata4 = IrpefPagata3 + ((this.redditoAnnuoLordo -50000)/100*43);
 
         if (this.redditoAnnuoLordo <= 15000) {   
-            let IrpefPagata1 = this.redditoAnnuoLordo/100*23;
-            let IrpefPagata = IrpefPagata1
-            return IrpefPagata;
+            return IrpefPagata1;
         }
     
        else if (this.redditoAnnuoLordo >15000 && this.redditoAnnuoLordo <= 28000){
-            let IrpefPagata1 = this.redditoAnnuoLordo/100*23;
-            let IrpefPagata2 = IrpefPagata1 + ((this.redditoAnnuoLordo - 15000)/100*25);
-            let IrpefPagata = IrpefPagata2
-            return IrpefPagata;
+            return IrpefPagata2;
         }
     
 
        else if (this.redditoAnnuoLordo >28000 && this.redditoAnnuoLordo <= 50000){
-            let IrpefPagata1 = this.redditoAnnuoLordo/100*23;
-            let IrpefPagata2 = IrpefPagata1 + ((this.redditoAnnuoLordo - 15000)/100*25);
-            let IrpefPagata3 = IrpefPagata2 + ((this.redditoAnnuoLordo - 28000)/100*35); 
-            let IrpefPagata = IrpefPagata3
-            return IrpefPagata;
+            return IrpefPagata3;
         }
 
         else if (this.redditoAnnuoLordo >50000){
-            let IrpefPagata1 = this.redditoAnnuoLordo/100*23;
-            let IrpefPagata2 = IrpefPagata1 + ((this.redditoAnnuoLordo - 15000)/100*25);
-            let IrpefPagata3 = IrpefPagata2 + ((this.redditoAnnuoLordo - 28000)/100*35); 
-            let IrpefPagata4 = IrpefPagata3 + ((this.redditoAnnuoLordo -50000)/100*43);
-            let IrpefPagata = IrpefPagata4
-            return IrpefPagata;
+            return IrpefPagata4;
         }
     }
 
@@ -59,8 +46,8 @@ class Lavoratore extends Tasse {
      nome:string;
      cognome:string;
      professione:string;
-        constructor(nome:string, cognome:string, professione:string, codredd:number,redditoAnnuoLordo:number,tasseInps:number,tasseIrpef:number){
-        super(codredd,redditoAnnuoLordo,tasseInps,tasseIrpef)
+        constructor(nome:string, cognome:string, professione:string, codredd:number,redditoAnnuoLordo:number){
+        super(codredd,redditoAnnuoLordo)
         this.nome = nome;
         this.cognome = cognome;
         this.professione = professione;
