@@ -1,0 +1,11 @@
+{
+  "name": "consegna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "backend": "json-server -w Abbigliamento.json"
+  },
+  "author": "",
+  "license": "ISC"
+}
