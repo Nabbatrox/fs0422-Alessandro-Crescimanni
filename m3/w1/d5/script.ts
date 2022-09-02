@@ -216,11 +216,13 @@ console.log('Inizio primo utente')
 let firstUser = new FirstUser("Vodafone", 50, 27, 0.20, 15);
 
 firstUser.ricarica(15);
+console.log('Saldo con ricarica');
 console.log(firstUser.carica);
 
 // scateno il metodo ricarica con il parametro unaRicarica in ingresso, controllo e attesto che il parametro carica sia stato correttamente aggiornato. Risultato: 50 + 15 = 65.
 
 firstUser.chiamata(18);
+console.log('Calcolo costo per minuti e detrazione su saldo');
 console.log(firstUser.numeroChiamate);
 
 // scateno il metodo chiamata, pago la tariffa per minuto, incremento di uno il contatore chiamate.
