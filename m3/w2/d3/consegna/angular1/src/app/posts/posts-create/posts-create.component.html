@@ -1,0 +1,23 @@
+
+  <div class="input-group mb-3">
+    <input [(ngModel)]="newPost.title" type="text" class="form-control" placeholder="Username" aria-label="Username">
+  </div>
+  
+  <div class="input-group">
+    <textarea [(ngModel)]="newPost.body" type="text" class="form-control" placeholderaria-label="With textarea"></textarea>
+  </div>
+
+  <select [(ngModel)]="newPost.type" class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">News</option>
+    <option value="2">Politic</option>
+    <option value="3">Education</option>
+  </select>
+
+  <div class="form-check">
+    <input  class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+    <input  class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+    
+  </div>
+
+  <button (click)="save()" type="button" class="btn btn-dark">Submit</button>
