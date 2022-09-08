@@ -1,0 +1,40 @@
+
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <input [(ngModel)]="newUser.username" type="text" class="form-control" placeholder="name"
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="input-group mb-3 ">
+                    <input type="email" class="form-control" placeholder="email"
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+
+            </div>
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <input  [(ngModel)]="newPost.title" type="text" class="form-control" placeholder="post title"
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-11">
+
+                    <textarea   [(ngModel)]="newPost.content" name="Scrivi qualcosa" id="" rows="3" cols="100"></textarea>
+                </div>
+                <div class="col-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+</form>
