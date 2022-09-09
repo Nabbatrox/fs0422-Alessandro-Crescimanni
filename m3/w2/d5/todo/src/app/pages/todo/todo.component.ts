@@ -16,7 +16,7 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
     this.todoSvc.getAllTodos()
     .then(res => {
-      this.todos = res
+      this.todos = res;
     })
   }
 

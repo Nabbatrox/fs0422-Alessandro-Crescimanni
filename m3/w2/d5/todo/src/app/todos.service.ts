@@ -10,7 +10,7 @@ export class TodosService {
 
   todosUrlPath:string = 'http://localhost:3000/todos'
 
-  todoArray:Todo[] = []
+  todos:Todo[] = []
 
   getAllTodos():Promise<Todo[]>{
      return new Promise<Todo[]>((resolve, reject) => {
