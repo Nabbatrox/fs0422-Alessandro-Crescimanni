@@ -1,9 +1,24 @@
 {
   "todos": [
     {
-      "id": 1,
       "title": "Imparare cose",
-      "completed": true
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "Cosa da fare",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "Terza cosa da fare",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "Aggiungi e controlla",
+      "completed": false,
+      "id": 4
     }
   ]
 }

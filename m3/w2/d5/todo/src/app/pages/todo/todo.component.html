@@ -1,16 +1,18 @@
 <form>
     <label >Scrivi cosa dovrai fare</label><br>
-    <textarea type="text" id="" placeholder="To Do..."></textarea>
+    <textarea [(ngModel)]="newTodo.title" name="title" placeholder="To Do..."></textarea>
     <input type="checkbox" id="ifTrueCheck" name="completed">
-    <button type="submit"> Inserisci! </button>
+    <button (click)="addNewTodo()" type="submit"> Inserisci! </button>
   </form>
 
 
   <div *ngIf="todos.length == 0">Loading...</div>
 <ng-container *ngFor="let todo of todos">
-  <div>
-    <h4>{{ todo.title }}</h4>  
-  </div>
+  <ul>
+    <li>{{ todo.title }}</li>
+    <button (click)="deleteTodo()"> Aggiungi </button>  
+    <button (click)="editTodo()"> Modifica </button>
+  </ul>
 </ng-container>
 
 
