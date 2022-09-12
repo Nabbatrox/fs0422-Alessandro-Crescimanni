@@ -1,0 +1,6 @@
+<div *ngIf="todos.length == 0">Giusto un secondo...</div>
+<ng-container *ngFor="let todo of todos">
+  <ul>
+    <li>{{ todo.title }}</li>
+  </ul>
+</ng-container>

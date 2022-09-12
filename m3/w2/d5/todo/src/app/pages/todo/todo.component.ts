@@ -11,6 +11,8 @@ export class TodoComponent implements OnInit {
 
   todos: Todo[] = [];
 
+
+
   newTodo: Todo = new Todo ('', false);
 
   constructor(private todoSvc:TodosService) { }
@@ -18,10 +20,9 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
     this.todoSvc.getAllTodos()
     .then(res => {
-      this.todos = res;
+      this.todos = res.filter(todo => todo.completed === false)
     })
   }
-
 
 
   addNewTodo(){
@@ -31,17 +32,37 @@ export class TodoComponent implements OnInit {
     setTimeout(() => {
       this.todoSvc.getAllTodos()
     .then(res => {
-      this.todos = res;
+      this.todos = res.filter(todo => todo.completed === false)
     });
-    },300)
+    },2300)
   }
 
   editTodo(){
 
   }
-  
-  deleteTodo(){}
 
+   toggleCompleted(todo:Todo){
+
+    todo.completed = !todo.completed;
+    this.todoSvc.updateTodo(todo.id, todo)
+    setTimeout(() => {
+      this.todoSvc.getAllTodos()
+    .then(res => {
+      this.todos = res.filter(todo => todo.completed === false)
+    });
+    },2300)
+    
+  }
+  
+  deleteTodo(id:number| undefined):void{
+    this.todoSvc.delTodo(id)
+    setTimeout(() => {
+      this.todoSvc.getAllTodos()
+    .then(res => {
+      this.todos = res.filter(todo => todo.completed === false)
+    });
+    },2300)
+  }
 
 
 }

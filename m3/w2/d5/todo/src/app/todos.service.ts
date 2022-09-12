@@ -22,6 +22,8 @@ export class TodosService {
 
   }
 
+  // .then(res => { res.filter(Boolean)
+
   // passo in ingresso il parametro e creo un nuovo oggetto Todo da inserire con metodo POST dentro il db.json e lo visualizzo successivamente nel DOM
   createTodo(todo:Todo):Promise<Todo[]> {
     return new Promise((resolve, reject) => {
