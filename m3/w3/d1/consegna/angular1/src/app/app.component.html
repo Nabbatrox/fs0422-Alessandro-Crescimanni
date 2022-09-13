@@ -1,0 +1,25 @@
+<header class="p-3 mb-3 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <h1>Our photos</h1>
+      
+    </div>
+  </div>
+</header>
+
+
+
+
+<div *ngFor="let photo of photos" class="card" style="width: 18rem;">
+  <img src= "{{photo.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{photo.title}}</h5>
+    <a (click)="like()" href="#" class="btn btn-primary">Like</a>
+    <a (click)="del(photo)" href="#" class="btn btn-danger">Elimina</a>
+    <p>{{i}}</p>
+  </div>
+</div>

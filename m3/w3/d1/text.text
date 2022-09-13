@@ -1,0 +1,70 @@
+Rx JS è una libreria esterna. 
+
+Ci sono gli Observable (che arrivano in stream di dati e possiamo inscriverci a questo flusso ricevendo i dati appena vengono emessi. Per essere attivat ha bisogno di una subscription()). subscribe è il then dell'Observable; il metodo utilizzato è il next (è simile alresolve della promise) che invia il dato al subscribe. La promise parte lo stesso, gli observable partono solo se gli dai subscribe.
+
+
+Aggiungere HttpClientModule dove mettevi formModule 
+
+//////////////////////////////
+
+apiUrl:string = "http://localhost:3000/posts'
+post:Post[] = []
+
+
+getAllPosts():Observable<Post[]>{
+  return this.http.get<Post[]>(this.apiUrl)
+    
+}
+
+addPost(post:Post){
+    return this.http.post(this.apiUrl,post)
+    }
+
+    editPost(post:Post){
+ return this.http.patch(this.apiUrl,post)
+        }
+
+        deletePost(id:number){
+            return this.http.delete(this.apiUrl+ '/'+id)
+        }
+
+
+//////////////
+        in post.component.ts 
+
+        ngOnInit(): void {
+            this.postSvc.getAllPosts().subscribe(posts => this.posts = posts)
+        }
+
+        save(){
+            this.postSvc.addPost(this.post).subscribe(res =>{
+                this.post.push(res)
+                this.post = new Post ('','')
+            })
+        }
+
+        deletePost{post:Post}{
+
+            this.postSvc.editPost(post.id).subscribe(res =>{
+                let index = this.posts.findIndex(p => p.id === post.id)
+                this.posts.splice(index,1, addPost)
+            })
+        }
+
+          editPost{post:Post}{
+
+            this.postSvc.delePost(post.id).subscribe(res =>{
+                let index = this.posts.findIndex(p => p.id === post.id)
+                this.posts.splice(index,1)
+            })
+        }
+
+        selectPost{post:Post}{
+            this.post = post
+        }
+
+
+        //// html update
+
+        button (click)="select(post)" class=
+        button (click)="deletePost(post)" class=

@@ -1,0 +1,52 @@
+
+<div class="container">
+  <div class="row">
+    <form class="col" (ngSubmit)="submit(form)" #form="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input #u="ngModel"
+         type="text" required id="name"
+         class="form-control" ngModel name="name">
+        <p class="errorText" *ngIf="checkValidity(u)">Devi riempire il campo Nome</p>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">AlterEgo</label>
+        <input #e="ngModel" required
+        type="text" id="alterEgo" class="form-control" ngModel name="alterEgo">
+        <p class="errorText" *ngIf="checkValidity(e)">Devi riempire il campo AlterEgo</p>
+      </div>
+      <div class="form-group">
+        <label for="power">Power:</label>
+        <select #p="ngModel" type="text" id="power" class="form-control" ngModel name="power">
+          <option value="">Non specificato</option>
+          <option value="">Strenght</option>
+          <option value="">Speed</option>
+          <option value="">Invisibility</option>
+          <option value="">Elasticbody</option>
+        </select>
+        <p class="errorText" *ngIf="checkValidity(p)">Devi riempire il campo Power</p>
+      </div>
+      <div class="form-group">
+        <label for="enemy">Enemy</label>
+        <input #n="ngModel" required
+        type="text" id="enemy" class="form-control" ngModel name="enemy">
+        <p class="errorText" *ngIf="checkValidity(n)">Devi riempire il campo Enemy</p>
+      </div>
+      <div class="form-group">
+        <label for="planet">Planet</label>
+        <input #z="ngModel" required
+        type="text" id="planet" class="form-control" ngModel name="planet">
+        <p class="errorText" *ngIf="checkValidity(z)">Devi riempire il campo Planet</p>
+
+      </div>
+      <div class="form-group">
+        <label for="weakness">Weakness</label>
+        <input #e="ngModel" required
+        type="text" id="weakness" class="form-control" ngModel name="weakness">
+      </div>
+      <button [disabled]="form.invalid" class="btn btn-primary">Invia</button>
+    </form>
+  </div>
+</div>
+
+
