@@ -16,15 +16,19 @@ export class UsersService {
     return this.http.get<Users[]>(this.apiUsers)
   }
 
-  addUsers(user: Users) {
+  getUserById(id:Number):Observable<Users>{
+    return this.http.get<Users>(this.apiUsers + "/" + id)
+  }
+
+  addUsers(user: Users):Observable<Users> {
     return this.http.post<Users>(this.apiUsers,user)
   }
 
-  editUsers(user: Users) {
+  editUsers(user: Users):Observable<Users> {
     return this.http.patch<Users>(this.apiUsers+'/'+ user.id, user)
   }
 
-  deleteUsers(user: Users) {
+  deleteUsers(user: Users):Observable<Users> {
     return this.http.delete<Users>(this.apiUsers+'/'+user.id)
   }
 

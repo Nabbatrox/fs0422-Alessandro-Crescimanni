@@ -1,0 +1,71 @@
+.card {
+    width: 400px;
+    margin-bottom: 1.5rem;
+    background-color: rgb(250, 250, 250);
+    border-radius: 20px;
+    margin-top: 3rem;
+
+  }
+
+
+.card-wrapper {
+
+  margin-top: 5rem;
+
+}
+
+.box {
+
+  width: 50%;
+
+}
+
+.form-items-container {
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+}
+
+.post-card {
+
+  display: flex;
+  justify-content: center;
+  justify-items: center ;
+  margin-top: 3rem;
+
+}
+
+.buttons-flex {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.title {
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 2rem 4rem;
+  background-color: rgb(67, 136, 182);
+  border-radius: 20px;
+  color: white;
+  letter-spacing: 3px;
+  
+}
+
+.content {
+
+
+  background-color: rgb(179, 226, 226);
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+
+}

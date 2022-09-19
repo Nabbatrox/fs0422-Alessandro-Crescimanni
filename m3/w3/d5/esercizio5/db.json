@@ -1,10 +1,24 @@
 {
-
-    "users":[
-
-    ],
-
-    "posts":[
-        
-    ]
+  "register": [],
+  "users": [
+    {
+      "email": "dffdddf@gmail.com",
+      "password": "$2a$10$1NQoLNqVxtnG47RN07NDl.kbkYxkAdIo/ZwdkosMuCgNj0PJXxOMC",
+      "username": "dfdffdf",
+      "id": 1
+    },
+    {
+      "email": "alessandrocrescimanni@gmail.com",
+      "password": "$2a$10$ziB6iDHRdTyRhuqyd9t7Eu4zWqr6AdHgtgyAsWNo.Fym11moeq33G",
+      "username": "Nabbatrox",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Benvenuti",
+      "content": "Questo e' un esperimento mal riuscito"
+    }
+  ]
 }

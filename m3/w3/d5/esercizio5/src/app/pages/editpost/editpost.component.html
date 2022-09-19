@@ -1,0 +1,18 @@
+<div class="card-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Edit your post</mat-card-title>
+      </mat-card-header>
+      <form class="form">
+        <mat-card-content class="form-items-container">
+          <mat-form-field class="title-container">
+            <input [(ngModel)]="post.title" matInput placeholder="Title" name="title">
+          </mat-form-field>
+          <mat-form-field class="content-container">
+            <textarea [(ngModel)]="post.content" matInput placeholder="Content" name="content"></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <button (click)="editPostById(post)" mat-stroked-button color="accent" class="btn-block">Submit</button>
+      </form>
+    </mat-card>
+  </div>

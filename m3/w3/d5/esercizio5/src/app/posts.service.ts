@@ -15,17 +15,21 @@ export class PostsService {
   getAllPosts():Observable<Posts[]> {
     return this.http.get<Posts[]>(this.apiPosts)
   }
+  
+  getPostId(post: Posts):Observable<Posts> {
+    return this.http.get<Posts>(this.apiPosts+'/'+ post.id)
+  }
 
-  addPosts(post: Posts) {
+  addPost(post: Posts) {
     return this.http.post<Posts>(this.apiPosts,post)
   }
 
-  editPosts(post: Posts) {
+  editPost(post: Posts) {
     return this.http.patch<Posts>(this.apiPosts+'/'+ post.id, post)
   }
   
 
-  deletePosts(post: Posts) { 
+  deletePost(post: Posts) { 
     return this.http.delete<Posts>(this.apiPosts+'/'+post.id)
   }
 
