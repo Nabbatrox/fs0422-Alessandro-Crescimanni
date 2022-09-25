@@ -1,0 +1,23 @@
+<h1>Posts</h1>
+<form>
+<input [(ngModel)]="post.title" name="title" placeholder="insert title" type="text">
+<input [(ngModel)]="post.content" name="content" placeholder="insert content" type="text">
+<button (click)="savePost()" class="submit" type="submit">Submit</button>
+
+</form>
+
+<div class="alert alert-info" *ngIf="posts.length == 0">Loading...</div>
+<table class="table" *ngIf="posts.length > 0">
+  <tr>
+    <th>titolo</th>
+    <th>content</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{post.title}}</td>
+    <td>{{post.content}}</td>
+    <td>
+        <button (click)="editPost()" class="submit" type="submit" >Modifica</button>
+        <button (click)="deletePost(post)" class="submit" type="submit" >Salva</button>
+    </td>
+  </tr>
+</table>

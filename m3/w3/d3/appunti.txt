@@ -1,0 +1,13 @@
+in angular app.modulo è la classe con il decoratore NgModule. 
+Ci sono Core Module (contiene una serie di service che utilizzeremo nell'app) e gli Share Module (che contiene direttve pipe component comune a più moduli).
+
+Attivando chieldren in un oggetto route si può fare una sottonavigazione. Tutti i moduli vanno inseriti nel "module" del sottocomponente principale.
+
+genera routing-modules (cancella import comport module e declaration. Aggiungi RouterModule in import, rubando NgModule. Aggiungi const routes:Routes = [])
+
+Lo Sheard è un modulo geenrico che racchiude funzionalità e componenti. 
+Ng g m shared. Cosa fare?
+Creare altri due componenti nel modulo: ng g c shared/list --skip.tests ed ng g c shared/item --skip.tests. 
+
+List avrà una struttura ul list-group contenente ng content. 
+Item invece sarà un singolo elemeto della lista che mi richiamerà un titolo.

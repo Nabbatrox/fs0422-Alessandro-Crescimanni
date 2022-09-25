@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "title": "ciao",
+      "content": "ciao",
+      "id": 1
+    },
+    {
+      "title": "sss",
+      "content": "ss",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "ciao@ciao.com",
+      "password": "$2a$10$i.B9rxhQhiT4scqH0Ua8AOkU2Wyg6kqA7iX6fmIy.V1vSXP/rCVSG",
+      "id": 1
+    },
+    {
+      "email": "Positiva@positiva.it",
+      "password": "$2a$10$bZWhI7KeUsDvl2TqUXZzQezYsJoBlkEIsen5Miat7YP.RZ8eEyRZC",
+      "id": 2
+    }
+  ]
+}

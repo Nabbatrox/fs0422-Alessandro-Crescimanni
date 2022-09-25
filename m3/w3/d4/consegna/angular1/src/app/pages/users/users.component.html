@@ -1,0 +1,22 @@
+<h1>Users</h1>
+<form>
+<input [(ngModel)]="user.email" name="email" placeholder="insert email" type="email">
+<input [(ngModel)]="user.password" name="password" placeholder="insert password" type="password">
+<button (click)="saveUser()" class="submit" type="submit">Submit</button>
+</form>
+
+<div class="alert alert-info" *ngIf="users.length == 0">Loading...</div>
+<table class="table" *ngIf="users.length > 0">
+  <tr>
+    <th>email</th>
+    <th>password</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.email}}</td>
+    <td>{{user.password}}</td>
+    <td>
+        <button (click)="editUser()" class="submit" type="submit" >Modifica</button>
+        <button (click)="deleteUser(user)" class="submit" type="submit" >Elimina</button>
+    </td>
+  </tr>
+</table>
