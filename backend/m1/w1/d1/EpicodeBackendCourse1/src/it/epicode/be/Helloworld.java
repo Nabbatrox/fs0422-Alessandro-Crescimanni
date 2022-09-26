@@ -23,7 +23,7 @@ public static void main (String[] args)
 		String f = pariDispari(46);
 		System.out.println("Il numero e' " + f);
 		
-		double g = areaTriangolo(54, 50, 65 );
+		double g = areaTriangolo(35, 25, 25 );
 		System.out.println("L'area del triangolo e'" + g);
 		
 		}
@@ -67,7 +67,8 @@ public static void main (String[] args)
 			
 			return Math.sqrt(semiPerimetro*(semiPerimetro - a)*(semiPerimetro - b)*(semiPerimetro - c));
 			
-			
+			// Su wikipedia ho trovato una sezione che parla di formula specifica per la stabilita' numerica.
+			// Sara' per questo che con alcuni numeri ricevo NaN o 0.0? a>=b>=c
 		}
 }
 
