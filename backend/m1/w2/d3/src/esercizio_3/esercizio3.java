@@ -19,9 +19,9 @@ public class esercizio3 {
 		listaPresenze.put("Giovanni", 6);
 		listaPresenze.put("Mario", 2);
 		listaPresenze.put("Florin", 2);
-		listaPresenze.put("SirDDS", 5);
-		listaPresenze.put("FrancyFrancy", 15);
-		listaPresenze.put("BeaCaccaPupu", 85);
+		listaPresenze.put("Davide", 5);
+		listaPresenze.put("Francesca", 15);
+		listaPresenze.put("Alessandro", 85);
 		
 		System.out.println(listaPresenze.toString());
 		
