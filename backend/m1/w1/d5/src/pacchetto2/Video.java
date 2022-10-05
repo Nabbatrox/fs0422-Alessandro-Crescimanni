@@ -53,7 +53,7 @@ public class Video extends ElementoMultimediale implements volume, luminosita {
 		// metodi che controllano e poi manipolano il valore numerico e, quindi, stringa, delle proprieta' dell'istanza della classe vol e lum.
 		
 		@Override
-		public int aumentaLuminosita() {
+		public int aumentaLuminosita(int lum) {
 			
 			switch(lum) {
 			
@@ -83,8 +83,12 @@ public class Video extends ElementoMultimediale implements volume, luminosita {
 		}
 
 		@Override
-		public int diminuisciLuminosita() {
+		public int diminuisciLuminosita(int lum) {
 			
+			if (lum >= 6 || lum < 0 ) {
+				
+				System.out.println("Il volume massimo e' 5 e quello minimo e' 0");
+			}else {
 			switch(lum) {
 			
 			case 5:
@@ -109,12 +113,12 @@ public class Video extends ElementoMultimediale implements volume, luminosita {
 			break;
 			}
 			
-			return lum;
-		}
-
+			
+		}return lum;
+}
 
 		@Override
-		public int aumentaVolume() {
+		public int aumentaVolume(int vol) {
 			
 			switch(vol) {
 			
@@ -145,7 +149,7 @@ public class Video extends ElementoMultimediale implements volume, luminosita {
 		}
 
 		@Override
-		public int diminuisciVolume() {
+		public int diminuisciVolume(int vol) {
 			
 			switch(vol) {
 			

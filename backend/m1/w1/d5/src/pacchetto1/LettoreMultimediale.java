@@ -29,8 +29,8 @@ public class LettoreMultimediale {
 		
 		
 		ElementoMultimediale[] arr = {a1, a2, i1, i2, v2};
-		
-		System.out.println("Quale elemento vuoi visualizzare?");
+
+		System.out.println("Quale elemento vuoi riprodurre?");
 		Scanner player = new Scanner(System.in);		
 		int input = player.nextInt();
 			

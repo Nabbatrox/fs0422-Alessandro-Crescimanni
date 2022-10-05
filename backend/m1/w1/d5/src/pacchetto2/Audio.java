@@ -27,7 +27,7 @@ public class Audio extends ElementoMultimediale implements volume {
 	}
 
 	@Override
-	public int aumentaVolume() {
+	public int aumentaVolume(int vol) {
 		
 		switch(vol) {
 		
@@ -58,7 +58,7 @@ public class Audio extends ElementoMultimediale implements volume {
 	}
 
 	@Override
-	public int diminuisciVolume() {
+	public int diminuisciVolume(int vol) {
 		
 		switch(vol) {
 		

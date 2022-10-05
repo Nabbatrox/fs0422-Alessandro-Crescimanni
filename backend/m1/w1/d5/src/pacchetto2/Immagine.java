@@ -37,7 +37,7 @@ public class Immagine extends ElementoMultimediale implements luminosita {
 	}
 
 	@Override
-	public int aumentaLuminosita() {
+	public int aumentaLuminosita(int lum) {
 		
 		switch(lum) {
 		
@@ -67,7 +67,7 @@ public class Immagine extends ElementoMultimediale implements luminosita {
 	}
 
 	@Override
-	public int diminuisciLuminosita() {
+	public int diminuisciLuminosita(int lum) {
 		
 		switch(lum) {
 		
