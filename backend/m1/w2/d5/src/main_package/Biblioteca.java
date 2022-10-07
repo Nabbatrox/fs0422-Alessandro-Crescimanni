@@ -98,6 +98,7 @@ public class Biblioteca {
 					List<CollezioneLibri> l1 = ListaLibri.stream()
 							.filter(c -> c.getCodiceISBN() == codiceISBN)
 							.collect(Collectors.toList());
+					System.out.println(l1);
 					break;
 				case 5:					
 					System.out.println("Inserisci l'anno di pubblicazione del libro che stai cercando: ");
@@ -106,24 +107,18 @@ public class Biblioteca {
 					List<CollezioneLibri> l2 = ListaLibri.stream()
 							.filter(c -> c.getAnnoPubblicazione() == annoPubblicazione)
 							.collect(Collectors.toList());
+					System.out.println(l2);
 					break;
 					
 				case 6:					
 					disponibile = false;
 					System.out.println("Inserisci l'autore del libro che stai cercando: ");
 					autore = perStringhe.nextLine();
-					Iterator<CollezioneLibri> iterator4 = ListaLibri.iterator();
-					while(iterator4.hasNext()) {
-						CollezioneLibri e = iterator4.next();
-						if (e.getAutore() == autore);
-						System.out.println(e);
-						disponibile = true;
-					}
-					
-					if (!disponibile) {
-						
-						System.out.println("Il libro che hai cercato non e' stato trovato.");
-					}
+					Stream<CollezioneLibri> s3 = ListaLibri.stream();
+					List<CollezioneLibri> l3 = ListaLibri.stream()
+							.filter(c -> c.getAutore() == autore)
+							.collect(Collectors.toList());
+					System.out.println(l3);
 					break;	
 				}
 			
