@@ -2,7 +2,12 @@ package models;
 
 import javax.persistence.Entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
+@Data
+@NoArgsConstructor
 public class Rivista extends Collezione {
 	
 	private Periodicita periodicita;
