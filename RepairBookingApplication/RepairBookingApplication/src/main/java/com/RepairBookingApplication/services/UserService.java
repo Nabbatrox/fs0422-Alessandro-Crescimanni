@@ -29,7 +29,7 @@ public class UserService {
 
         Optional<User> user = userRepository.findById(id);
 
-        if(!user.isPresent())
+        if(user.isEmpty())
             throw new NotFoundException("User not available");
 
         return user.get();

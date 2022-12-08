@@ -1,8 +1,13 @@
 package com.RepairBookingApplication.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.RepairBookingApplication.exceptions.NotFoundException;
 import com.RepairBookingApplication.models.Device;
 import com.RepairBookingApplication.repositories.DeviceRepository;
 
@@ -13,8 +18,41 @@ public class DeviceService {
 	private DeviceRepository deviceRepository;
 	
 	public Device save(Device x) {
+		
 		return deviceRepository.save(x);
 		
+	}
+	
+    public Page<Device> getAll(Pageable d) {
+        return deviceRepository.findAll(d);
+    }
+	
+	public Device getById(Long id) {
+		
+		Optional<Device> device = deviceRepository.findById(id);
+		
+		if(device.isEmpty()) throw new NotFoundException("Device not found");
+		
+		return device.get();
+		
+	}
+	
+	public Device findBySerialNumber(String serialnumber) {
+		
+		Optional<Device> device = deviceRepository.findBySerialNumber(serialnumber);
+		
+		if(device.isEmpty()) throw new NotFoundException("Device not found");
+		
+		return device.get();
+			
+	}
+	
+	public void deleteById(Long id) {
+		deviceRepository.deleteById(id);
+	}
+	
+	public void deleteBySerialNumber(String serialnumber) {
+		deviceRepository.deleteBySerialNumber(serialnumber);
 	}
 	
 	
