@@ -24,7 +24,8 @@ import com.RepairBookingApplication.services.UserService;
 
 
 @RestController
-@RequestMapping("auth")
+@CrossOrigin(origins = "http://localhost:4200", maxAge=3600)
+@RequestMapping("/auth")
 public class AuthController {
 
 	@Autowired
