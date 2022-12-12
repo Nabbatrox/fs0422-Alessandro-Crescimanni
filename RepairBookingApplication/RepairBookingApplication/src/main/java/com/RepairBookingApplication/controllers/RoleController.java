@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +24,7 @@ import com.RepairBookingApplication.services.RoleService;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200", maxAge=3600)
 @RequestMapping("/api/roles/") //TODO impostare la rotta
 public class RoleController {
 
@@ -34,7 +36,7 @@ public class RoleController {
 //---------------------------- Get ---------------------------------
     
     @GetMapping
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_USER')")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public ResponseEntity<List<Role>> getRoleList() {
         
     	List<Role> res = roleService.getAll();
@@ -47,7 +49,7 @@ public class RoleController {
     }
 
     @GetMapping("{id}")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_USER')")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public Role getRoleById(@PathVariable("id") Long id) {
         return roleService.getById(id);
     }
@@ -55,7 +57,7 @@ public class RoleController {
 //---------------------------- Post --------------------------------
 
     @PostMapping
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     public Role saveRole(
             @RequestParam(value="roleType",required=false) RoleType roleType    
     ) {
@@ -70,7 +72,7 @@ public class RoleController {
 //---------------------------- Put ---------------------------------
     
     @PutMapping("{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     public Role updateRole(
             @PathVariable("id") Long id,
             @RequestParam(value="roleType",required=false) RoleType roleType
@@ -87,7 +89,7 @@ public class RoleController {
  //---------------------------- Delete -------------------------------    
 
     @DeleteMapping("{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     public String deleteRoleById(@PathVariable("id") Long id) {
         roleService.deleteById(id);
         return "Role deleted successfully";
