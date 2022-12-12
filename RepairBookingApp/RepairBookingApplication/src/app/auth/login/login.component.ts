@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         } else {
           this.auth.saveAuthToSession(authentication)
         }
-          this.router.navigate(['/dashboard'])
+          this.router.navigate(['/'])
         })  
   }
 
