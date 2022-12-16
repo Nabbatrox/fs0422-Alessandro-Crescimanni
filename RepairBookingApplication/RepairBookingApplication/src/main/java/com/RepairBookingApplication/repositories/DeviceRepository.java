@@ -9,10 +9,8 @@ import com.RepairBookingApplication.models.Device;
 
 @Repository
 public interface DeviceRepository extends JpaRepository<Device, Long> {
-	
-	Optional<Device> findBySerialNumber(String serialnumber);
 
-	void deleteBySerialNumber(String serialnumber);
-	
 
+	
+	
 }

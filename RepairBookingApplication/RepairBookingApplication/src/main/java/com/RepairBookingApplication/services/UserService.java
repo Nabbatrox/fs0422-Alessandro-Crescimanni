@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.RepairBookingApplication.exceptions.NotFoundException;
@@ -17,7 +18,11 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
+	@Autowired
+	PasswordEncoder encoder;
+	
 	public User save(User x) {
+		x.setPassword(encoder.encode(x.getPassword()));
         return userRepository.save(x);
     }
 

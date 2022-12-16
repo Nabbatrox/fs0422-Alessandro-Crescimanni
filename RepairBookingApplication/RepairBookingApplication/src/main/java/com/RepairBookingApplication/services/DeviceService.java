@@ -37,24 +37,9 @@ public class DeviceService {
 		
 	}
 	
-	public Device findBySerialNumber(String serialnumber) {
-		
-		Optional<Device> device = deviceRepository.findBySerialNumber(serialnumber);
-		
-		if(device.isEmpty()) throw new NotFoundException("Device not found");
-		
-		return device.get();
-			
-	}
 	
 	public void deleteById(Long id) {
 		deviceRepository.deleteById(id);
 	}
 	
-	public void deleteBySerialNumber(String serialnumber) {
-		deviceRepository.deleteBySerialNumber(serialnumber);
-	}
-	
-	
-
 }

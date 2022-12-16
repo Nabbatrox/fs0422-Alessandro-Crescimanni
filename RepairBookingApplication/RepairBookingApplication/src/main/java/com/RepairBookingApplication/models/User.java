@@ -30,12 +30,12 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String name;
-	private String lastname;
-	
 	@Column(unique = true)
 	private String username;
 	
+	private String firstname;
+	private String lastname;
+		
 	@Column(unique = true)
 	private String email;
 	

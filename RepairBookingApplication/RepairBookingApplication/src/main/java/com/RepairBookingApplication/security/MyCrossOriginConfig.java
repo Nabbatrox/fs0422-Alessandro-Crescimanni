@@ -26,24 +26,24 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //}
 //v2 - control
 
-@Configuration
-public class MyCrossOriginConfig {
-
-	@SuppressWarnings("deprecation")
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-	  
-      return new WebMvcConfigurerAdapter() {
-          @Override
-          public void addCorsMappings(CorsRegistry registry) {
-              registry.addMapping("/api/**")
-                  .allowedOrigins("http://127.0.0.1:5500/")
-                  .allowedMethods("GET", "POST")
-                  .allowedHeaders("h1", "h2")
-                  .allowCredentials(false)
-                  .maxAge(3600);
-	      }
-	  
-      };
-	}
-}
+//@Configuration
+//public class MyCrossOriginConfig {
+//
+//	@SuppressWarnings("deprecation")
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//	  
+//      return new WebMvcConfigurerAdapter() {
+//          @Override
+//          public void addCorsMappings(CorsRegistry registry) {
+//              registry.addMapping("/**")
+//                  .allowedOrigins("http://localhost:4200")
+//                  .allowedMethods("GET", "POST", "PUT", "DELETE")
+//                  .allowedHeaders("h1", "h2")
+//                  .allowCredentials(true)
+//                  .maxAge(3600);
+//	      }
+//	  
+//      };
+//	}
+//}

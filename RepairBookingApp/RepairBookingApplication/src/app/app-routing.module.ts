@@ -10,7 +10,15 @@ const routes: Routes = [
  .then(m => m.LoginModule) },
 
  { path: 'register', loadChildren: () => import('./auth/register/register.module')
- .then(m => m.RegisterModule) }
+ .then(m => m.RegisterModule) },
+
+ { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+
+ { path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule) },
+
+
+
+
 
  ];
 

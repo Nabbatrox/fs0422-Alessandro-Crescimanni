@@ -33,14 +33,14 @@ import com.RepairBookingApplication.services.UserService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200", maxAge=3600)
-@RequestMapping("/api/users/")
+@RequestMapping("/api/users")
 public class UserController {
 		
 
 	private final Logger logger = LoggerFactory.getLogger(UserController.class);
 	    
-	@Autowired
-	PasswordEncoder encoder;
+//	@Autowired
+//	PasswordEncoder encoder;
 
 	@Autowired
 	private UserService userService;
@@ -51,8 +51,8 @@ public class UserController {
 	    
 //---------------------------- Get ---------------------------------
 	    
-	@GetMapping
-	@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_USER')")
+	@GetMapping("/getall")
+//	@PreAuthorize("hasAnyRole('ADMIN','USER')")
 	public ResponseEntity<Page<User>> getUserList(Pageable p) {
 	    	
 		Page<User> res = userService.getAll(p);
@@ -74,44 +74,22 @@ public class UserController {
 
 @PostMapping("/register")
 //@PreAuthorize("hasRole('ROLE_ADMIN')")
-public User saveUser(
-	      @RequestParam(value="name",required=false) String name,
-	      @RequestParam(value="lastname",required=false) String lastname,
-	      @RequestParam(value="username",required=true) String username,
-	      @RequestParam(value="email",required=false) String email,
-	      @RequestParam(value="password",required=true) String password
-	      
-//	      @RequestBody 
-//	      RegisterDTO registerDTO
-) {
-	   User user = User.builder()
-	     .name(name)
-	     .lastname(lastname)
-	     .username(username)
-	     .email(email)
-	     .password(encoder.encode(password))
-	     .active(true)
-	     .build();
+public User saveUser(@RequestBody User user) {
+		user.setActive(true);
+	    logger.info("Save User in UserController");
+	    return userService.save(user);
 	   
-	   Set<Role> roles = user.getRoles();
-		roles.add(roleService.getByRole(RoleType.ROLE_USER));
-		user.setRoles(roles);
-	   
-	  
-
-	   logger.info("Save User in UserController");
-	   return userService.save(user);
 }
 
 //---------------------------- Put ---------------------------------
 	    
-		@PutMapping("/{id}/add-role/{roleType}")
-		@PreAuthorize("hasRole('ROLE_ADMIN')")
+		@PutMapping("/{id}/add-role/{idruolo}")
+//		@PreAuthorize("hasRole('ADMIN')")
 		public void addRole(@PathVariable("id") Long id,
-							@PathVariable("roleType") RoleType roleType) {
+							@PathVariable("idruolo") Long idruolo) {
 			User user = userService.getById(id);
 			Set<Role> roles = user.getRoles();
-			roles.add(roleService.getByRole(roleType));
+			roles.add(roleService.getById(idruolo));
 			user.setRoles(roles);
 			
 			
@@ -120,20 +98,21 @@ public User saveUser(
 		}
 
 	    @PutMapping("{id}")
+	    @PreAuthorize("hasAnyRole()")
 	    public User updateUser(
 	            @PathVariable("id") Long id,
-	            @RequestParam(value="name",required=false) String name,
+	            @RequestParam(value="email",required=false) String email,	            
+	            @RequestParam(value="name",required=false) String firstname,
 	            @RequestParam(value="lastname",required=false) String lastname,
 	            @RequestParam(value="username",required=false) String username,
-	            @RequestParam(value="email",required=false) String email,
 	            @RequestParam(value="password",required=false) String password
 	            ) {
 
 	        User user = userService.getById(id);
-
-	        if(name != null) user.setName(name);
-	        if(lastname != null) user.setLastname(lastname);
+	        
 	        if(username != null) user.setUsername(username);
+	        if(firstname != null) user.setFirstname(firstname);
+	        if(lastname != null) user.setLastname(lastname);	        
 	        if(email != null) user.setEmail(email);
 	        if(password != null) user.setPassword(password);
 
@@ -144,7 +123,7 @@ public User saveUser(
 	// -------------------------- Delete -------------------------------
 
 	    @DeleteMapping("{id}")
-	    @PreAuthorize("hasRole('ROLE_ADMIN')")
+	    @PreAuthorize("hasRole('ADMIN')")
 	    public String deleteUserById(@PathVariable("id") Long id) {
 	        userService.deleteById(id);
 	        return "User deleted successfully";
